@@ -9,17 +9,17 @@ import iconPinterest from '@/public/images/icon-pinterest.svg';
 
 import iconTwitter from '@/public/images/icon-twitter.svg';
 import Link from 'next/link';
-import { link } from 'fs';
+import bgPatternFooterDesktop from '@/public/images/bg-pattern-footer-desktop.svg';
 
 const SocialMediaIcon = [
-    { src: iconFacebook, alt: 'Facebook' },
+    { src: iconFacebook, alt: 'Facebook', href: '#' },
     {
-        src: iconTwitter, alt: 'Twitter'
+        src: iconTwitter, alt: 'Twitter', href: '#'
     },
 
-    { src: iconInstagram, alt: 'Instagram' },
+    { src: iconInstagram, alt: 'Instagram', href: '#' },
 
-    { src: iconPinterest, alt: 'Pinterest' }]
+    { src: iconPinterest, alt: 'Pinterest', href: '#' }]
 
 
 
@@ -42,7 +42,8 @@ const FooterDetails = [
 ]
 export default function Footer() {
     return (
-        <div className='flex flex-col gap-4 text-sm font-bold py-5' >
+        <div className='flex flex-col gap-4 text-sm font-bold py-5 px-20 ' >
+            <Image src={bgPatternFooterDesktop} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute left-0 w-[35%] z-0 lg:w-[34%]' />
             <div className="flex justify-between items-center">
                 <div className="flex justify-between items-center">
                     <Link href={'/'}><Image src={logo} alt={'logo'} width={100} height={100} />
@@ -50,12 +51,12 @@ export default function Footer() {
                 </div>
                 <div className="flex gap-2 items-center">
                     {SocialMediaIcon.map((item) => (
-                        <Image src={item.src} alt={item.alt} width={18} height={18} />
+                        <Link href={item.href}> <Image src={item.src} alt={item.alt} width={18} height={18} /></Link>
                     ))}
                 </div>
             </div>
-            <hr className='w-full' />
-            <div className="flex justify-between">
+            <hr className='w-full  ' />
+            <div className="flex justify-between z-20">
                 {FooterDetails.map((item, index) => (
                     <div key={index} className="flex  gap-4 flex-col">
 

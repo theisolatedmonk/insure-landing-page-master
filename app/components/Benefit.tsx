@@ -13,7 +13,7 @@ const benefitData = [
 
 export default function Benefit() {
     return (
-        <div className='flex flex-col gap-10 font-Karla mt-28 sm:items-start items-center'>
+        <div className='flex flex-col gap-10 font-Karla mt-28 sm:items-start items-center px-20'>
             <hr className=' w-[30%] bg-white' />
             <p className="text-3xl font-bold ">We’re different</p>
             <div className="sm:flex w-full gap-2 flex-row items-center">
