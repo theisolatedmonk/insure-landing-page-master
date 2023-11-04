@@ -9,7 +9,7 @@ type Props = {}
 
 export default function Navbar({ }: Props) {
     return (
-        <div className='flex   w-full  items-center justify-between text-sm px-20 '>
+        <div className='flex   w-full  items-center justify-between text-sm sm:px-20 px-10 '>
             <Image className=' cursor-pointer' src={logo} alt={''} height={100} width={100} />
             <div className="flex gap-4 items-center ">
                 <div className="sm:flex gap-4 hidden">

@@ -13,15 +13,15 @@ const benefitData = [
 
 export default function Benefit() {
     return (
-        <div className='flex flex-col gap-10 font-Karla mt-28 sm:items-start items-center px-20'>
+        <div className='flex flex-col gap-10 font-Karla sm:mt-28 sm:items-start items-center sm:px-20 p-[70px] sm:p-0'>
             <hr className=' w-[30%] bg-white' />
             <p className="text-3xl font-bold ">We’re different</p>
-            <div className="sm:flex w-full gap-2 flex-row items-center">
+            <div className="sm:flex w-full sm:gap-2 gap-4 flex-row items-center">
                 {benefitData.map((item) => (
 
                     <div className="flex flex-col  items-center sm:items-start text-center sm:text-start ">
                         <Image src={item.src} alt={item.alt} className='p-4' />
-                        <div className="flex flex-col">
+                        <div className="flex flex-col gap-4">
                             <p className="font-bold text-lg">{item.heading}</p>
                             <p className="text-xs">{item.paragraph}</p>
                         </div>

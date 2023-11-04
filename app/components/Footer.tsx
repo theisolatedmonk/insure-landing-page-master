@@ -44,24 +44,24 @@ export default function Footer() {
     return (
         <div className='flex flex-col gap-4 text-sm font-bold py-5 px-20 ' >
             <Image src={bgPatternFooterDesktop} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute left-0 w-[35%] z-0 lg:w-[34%]' />
-            <div className="flex justify-between items-center">
-                <div className="flex justify-between items-center">
-                    <Link href={'/'}><Image src={logo} alt={'logo'} width={100} height={100} />
+            <div className="flex justify-between items-center sm:flex-row flex-col gap-6  p-8">
+                <div className="flex justify-between items-center z-30 ">
+                    <Link href={'/'}><Image src={logo} alt={'logo'} width={100} height={100} className='' />
                     </Link>
                 </div>
                 <div className="flex gap-2 items-center">
                     {SocialMediaIcon.map((item) => (
-                        <Link href={item.href}> <Image src={item.src} alt={item.alt} width={18} height={18} /></Link>
+                        <Link href={item.href} > <Image src={item.src} alt={item.alt} width={18} height={18} className='' /></Link>
                     ))}
                 </div>
             </div>
             <hr className='w-full  ' />
-            <div className="flex justify-between z-20">
+            <div className="flex justify-between z-20 items-center sm:flex-row flex-col gap-6 ">
                 {FooterDetails.map((item, index) => (
-                    <div key={index} className="flex  gap-4 flex-col">
+                    <div key={index} className="flex  gap-4 flex-col sm:items-start items-center">
 
                         <p className="text-DarkGrayishViolet ">{item.title}</p>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 sm:items-start items-center">
                             {item.links.map((d, i) => <div className="flex flex-col gap-2" key={i}>
                                 <Link href={d.href}>{d.label}</Link>
                             </div>)}

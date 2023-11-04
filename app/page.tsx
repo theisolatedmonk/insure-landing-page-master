@@ -23,7 +23,7 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen w-full   py-4 gap-4 font-Karla">
+    <div className="flex flex-col h-screen w-full   py-4 gap-4 font-Karla ">
       <Navbar />
       <div className="bg-DarkViolet w-full h-full ">
         <HeroSection />
@@ -33,17 +33,19 @@ export default function Home() {
       <Benefit />
 
       {/* <Image src={bgPatternHowWeWorkDesktop} alt={''} /> */}
-      <div className="flex flex-col px-20">
-        <div className="bg-DarkViolet  w-full   flex  text-white items-center justify-between px-20  relative lg:py-[76px] sm:py-[25px]  lg:px-[85px] z-10">
-          <Image src={bgPatternHowWeWorkDesktop} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute right-0 w-[35%]' />
-          <p className=" text-4xl font-bold  0 w-96 p-6 ">
-            Find out more about how we work
-          </p>
-          <button className=' border-2 border-white  h-10  text-center hover:text-DarkViolet hover:bg-white font-bold p-2 z-20'> HOW WE WORK</button>
+      <div className="flex flex-col sm:px-20">
+        <div className="bg-DarkViolet  w-full   flex  text-white items-center  sm:px-20  relative lg:py-[76px] sm:py-[25px]  lg:px-[85px] z-10">
+          <Image src={bgPatternHowWeWorkDesktop} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute right-0 w-[35%] sm:flex hidden ' />
+          <div className="flex flex-col sm:flex-row w-full items-center sm:justify-between  text-center sm:text-start py-16  sm:py-0 ">
+            <p className=" text-5xl sm:text-4xl font-bold  sm:w-96 sm:p-6 p-12 w-full ">
+              Find out more about how we work
+            </p>
+            <button className=' border-2 border-white  h-10  text-center hover:text-DarkViolet hover:bg-white font-bold p-2 z-20 w-44'> HOW WE WORK</button>
+          </div>
         </div>
       </div>
-      <Image src={bgPatternIntroLeftDesktop} alt={''} className='absolute left-0 z-20 top-[360px] lg:top-[300px]  overflow-visible' width={100} height={100} />
-      <Image src={imageIntroDesktop} alt={''} className='absolute right-[90px] top-40' width={320} height={320} />
+      <Image src={bgPatternIntroLeftDesktop} alt={''} className='absolute left-0 z-20 top-[360px] lg:top-[300px]  sm:flex hidden ' width={100} height={100} />
+      <Image src={imageIntroDesktop} alt={''} className='absolute right-[90px] top-40 sm:flex hidden' width={320} height={320} />
       <Footer />
     </div>
   )
