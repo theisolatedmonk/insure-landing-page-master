@@ -1,4 +1,4 @@
-
+'use client'
 import Image from 'next/image';
 // import bgPatternFooterMobile from '@/public/images/bg-pattern-footer-mobile.svg';
 import bgPatternHowWeWorkDesktop from '@/public/images/bg-pattern-how-we-work-desktop.svg';
@@ -18,13 +18,31 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import Benefit from './components/Benefit';
 import Footer from './components/Footer';
+import { useState } from 'react';
+import Link from 'next/link';
+import logo from "@/public/images/logo.svg";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
+
+
+
+const navLinks = [
+  { label: "HOW WE WORK", href: '#' },
+  { label: " BLOG", href: '#' },
+  { label: " ACCOUNT", href: '#' },
+  { label: "", href: '#' }
+]
 
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+
+
+
+
   return (
-    <div className="flex flex-col h-screen w-full   py-4 gap-4 font-Karla ">
-      <Navbar />
+    <div className="flex flex-col h-screen w-full   pb-4 gap-4 font-Karla  overscroll-auto">
+
       <div className="bg-DarkViolet w-full h-full ">
         <HeroSection />
       </div>
