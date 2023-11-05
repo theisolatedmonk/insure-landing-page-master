@@ -7,7 +7,8 @@ import bgPatternIntroLeftDesktop from '@/public/images/bg-pattern-intro-left-des
 import bgPatternIntroLeftMobile from '@/public/images/bg-pattern-intro-left-mobile.svg';
 import bgPatternIntroRightDesktop from '@/public/images/bg-pattern-intro-right-desktop.svg';
 import bgPatternIntroRightMobile from '@/public/images/bg-pattern-intro-right-mobile.svg';
-import bgPatternMobileNav from '@/public/images/bg-pattern-mobile-nav.svg';
+// import bgPatternMobileNav from '@/public/images/bg-pattern-mobile-nav.svg';
+
 type Props = {}
 
 export default function HeroSection({ }: Props) {
@@ -16,8 +17,8 @@ export default function HeroSection({ }: Props) {
             <div className="flex flex-col sm:pl-10 sm:w-[60%] gap-5  w-full sm:bg-none  ">
                 <hr className=' w-[30%] bg-white sm:flex hidden' />
                 <Image src={imageIntroMobile} alt={''} className='sm:hidden flex w-full h-full' width={255} height={255} />
-                <div className="flex flex-col px-9 sm:px-0 gap-8 items-center sm:items-start bg-DarkViolet py-8 sm:py-0">
-                    <p className="text-5xl font-bold sm:pr-16 sm:text-start text-center  px-8 sm:p-0"> Humanizing your insurance</p>
+                <div className="flex flex-col px-5 sm:px-0 gap-8 items-center sm:items-start bg-DarkViolet py-24 sm:py-0">
+                    <p className="text-5xl font-bold sm:pr-16 sm:text-start text-center   sm:p-0"> Humanizing your insurance</p>
                     <p className="text-sm sm:text-start text-center  px-8 sm:p-0">
                         Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.
                     </p>
@@ -28,6 +29,8 @@ export default function HeroSection({ }: Props) {
             {/* <Image src={imageIntroDesktop} alt={''} className='absolute right-[90px]' width={300} height={300} /> */}
 
             <Image src={bgPatternIntroRightDesktop} alt={''} className='absolute right-0 z-20 -top-6 sm:flex hidden' width={255} height={255} />
+
+            <Image src={bgPatternIntroLeftMobile} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute left-0 w-[45%] z-30 lg:w-[34%] top-[450px] sm:hidden flex ' />
 
 
 

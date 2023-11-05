@@ -5,7 +5,7 @@ import bgPatternHowWeWorkDesktop from '@/public/images/bg-pattern-how-we-work-de
 import bgPatternHowWeWorkMobile from '@/public/images/bg-pattern-how-we-work-mobile.svg';
 import bgPatternIntroLeftDesktop from '@/public/images/bg-pattern-intro-left-desktop.svg';
 import bgPatternIntroLeftMobile from '@/public/images/bg-pattern-intro-left-mobile.svg';
-import bgPatternIntroRightDesktop from '@/public/images/bg-pattern-intro-right-desktop.svg';
+// import bgPatternIntroRightDesktop from '@/public/images/bg-pattern-intro-right-desktop.svg';
 import bgPatternIntroRightMobile from '@/public/images/bg-pattern-intro-right-mobile.svg';
 import bgPatternMobileNav from '@/public/images/bg-pattern-mobile-nav.svg';
 
@@ -29,24 +29,32 @@ export default function Home() {
         <HeroSection />
       </div>
 
+      <div className="flex flex-col mt-56 sm:mt-0 lg:mt-0 items-center sm:mb-8 lg:mb-10"> <Benefit /></div>
 
-      <Benefit />
 
       {/* <Image src={bgPatternHowWeWorkDesktop} alt={''} /> */}
       <div className="flex flex-col sm:px-20">
-        <div className="bg-DarkViolet  w-full   flex  text-white items-center  sm:px-20  relative lg:py-[76px] sm:py-[25px]  lg:px-[85px] z-10">
-          <Image src={bgPatternHowWeWorkDesktop} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute right-0 w-[35%] sm:flex hidden ' />
+
+        <div className="bg-DarkViolet  w-full   flex  text-white items-center  sm:px-20  relative  lg:py-[70px] sm:py-[48px]  lg:px-[85px] z-10">
+
+          <Image src={bgPatternHowWeWorkDesktop} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute right-0 w-[40%] sm:flex hidden  xl:w-[28%]' />
+
+          <Image src={bgPatternHowWeWorkMobile} alt={'PatternFooterDesktop'} width={100} height={100} className='absolute right-0 w-[55%] sm:hidden  flex ' />
           <div className="flex flex-col sm:flex-row w-full items-center sm:justify-between  text-center sm:text-start py-16  sm:py-0 ">
-            <p className=" text-5xl sm:text-4xl font-bold  sm:w-96 sm:p-6 p-12 w-full ">
+            <p className=" text-5xl sm:text-4xl font-bold  sm:w-96 sm:p-0 p-8 w-full ">
               Find out more about how we work
             </p>
             <button className=' border-2 border-white  h-10  text-center hover:text-DarkViolet hover:bg-white font-bold p-2 z-20 w-44'> HOW WE WORK</button>
           </div>
         </div>
       </div>
-      <Image src={bgPatternIntroLeftDesktop} alt={''} className='absolute left-0 z-20 top-[360px] lg:top-[300px]  sm:flex hidden ' width={100} height={100} />
-      <Image src={imageIntroDesktop} alt={''} className='absolute right-[90px] top-40 sm:flex hidden' width={320} height={320} />
+
       <Footer />
+
+      <Image src={bgPatternIntroLeftDesktop} alt={''} className='absolute left-0 z-20 top-[360px] xl:top-[300px]  sm:flex hidden ' width={100} height={100} />
+      <Image src={imageIntroDesktop} alt={''} className='absolute right-[90px] top-40 sm:flex hidden' width={320} height={320} />
+
+      <Image src={bgPatternIntroRightMobile} alt={''} className='absolute right-0 z-20 top-[890px] sm:hidden  flex' width={125} height={125} />
     </div>
   )
 }
