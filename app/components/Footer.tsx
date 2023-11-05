@@ -56,7 +56,7 @@ export default function Footer() {
                     <Link href={'/'}><Image src={logo} alt={'logo'} width={100} height={100} className='' />
                     </Link>
                 </div>
-                <div className="flex gap-2 items-center z-40 sm:p-20">
+                <div className="flex gap-2 items-center z-30 sm:p-20">
                     {SocialMediaIcon.map((item) => (
                         <Link href={item.href} > <Image src={item.src} alt={item.alt} width={18} height={18} className='' /></Link>
                     ))}
